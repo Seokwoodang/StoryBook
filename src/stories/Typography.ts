@@ -4,7 +4,41 @@ export interface StyleOptionProps {
   [key: string]: any;
 }
 
-const typography: StyleOptionProps = {
+type TypographyKeys =
+  | "heading_desktop_4xl"
+  | "heading_desktop_3xl"
+  | "heading_desktop_2xl"
+  | "heading_desktop_1xl"
+  | "heading_desktop_lg"
+  | "heading_desktop_md"
+  | "heading_desktop_sm"
+  | "body_lg_semibold"
+  | "body_lg_medium"
+  | "body_lg_regular"
+  | "body_lg_underline"
+  | "body_lg_italic"
+  | "body_md_semibold"
+  | "body_md_medium"
+  | "body_md_regular"
+  | "body_md_underline"
+  | "body_md_italic"
+  | "body_sm_semibold"
+  | "body_sm_medium"
+  | "body_sm_regular"
+  | "body_sm_underline"
+  | "body_sm_italic"
+  | "body_xsm_semibold"
+  | "body_xsm_medium"
+  | "body_xsm_regular"
+  | "body_xsm_underline"
+  | "body_xsm_italic"
+  | "heading_mobile_4xl"
+  | "heading_mobile_3xl"
+  | "heading_mobile_2xl"
+  | "heading_mobile_1xl"
+  | "heading_mobile_lg";
+
+const typography: Record<TypographyKeys, ReturnType<typeof css>> = {
   heading_desktop_4xl: css`
     font-size: 48px;
     font-family: "bold";

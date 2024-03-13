@@ -6,7 +6,7 @@ import { Button } from "./stories/Button";
 function App() {
   return (
     <div className="App">
-      <div style={{ button }}>
+      <div style={{ display: "grid", gap: "5px" }}>
         <Button label="hello" theme="primary" size="small" />
         <Button label="hello" theme="primary_outline" size="small" />
         <Button label="hello" theme="primary_clear" size="small" />

@@ -57,7 +57,7 @@ const buttonThemes: StyleOptionProps = {
   `,
   secondary: css`
     color: #333;
-    background-color: transparent;
+    background-color: var(--bg_interactive_secondary);
     box-shadow: rgba(0, 0, 0, 0.15) 0px 0px 0px 1px inset;
   `,
   danger: css`

@@ -1,24 +1,20 @@
 import React from "react";
 import logo from "./logo.svg";
 import "./App.css";
+import { Button } from "./stories/Button";
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <div style={{ button }}>
+        <Button label="hello" theme="primary" size="small" />
+        <Button label="hello" theme="primary_outline" size="small" />
+        <Button label="hello" theme="primary_clear" size="small" />
+        <Button label="hello" theme="secondary" size="small" />
+        <Button label="hello" theme="danger" size="small" />
+        <Button label="hello" theme="danger_outline" size="small" />
+        <Button label="hello" theme="inversed_outline" size="small" />
+      </div>
     </div>
   );
 }

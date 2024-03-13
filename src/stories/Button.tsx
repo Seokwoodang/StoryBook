@@ -1,11 +1,18 @@
 import React from "react";
 // import "./button.css";
 import styled, { css } from "styled-components";
-import typography, { StyleOptionProps } from "./Typography";
+import typography, { StyleOptionProps } from "./Foundation/Typography";
 import "./font.css";
 
 type ButtonSize = "small" | "medium" | "large";
-type ButtonTheme = "primary" | "secondary" | "danger";
+type ButtonTheme =
+  | "primary"
+  | "primary_outline"
+  | "primary_clear"
+  | "secondary"
+  | "danger_outline"
+  | "inversed_outline"
+  | "danger";
 
 interface ButtonProps {
   theme?: ButtonTheme;
@@ -26,6 +33,7 @@ export const Button = ({
     <StButton
       type="button"
       {...props}
+      theme={theme}
       size={size}
       backgroundColor={backgroundColor}
       label=""
@@ -37,8 +45,15 @@ export const Button = ({
 
 const buttonThemes: StyleOptionProps = {
   primary: css`
-    background-color: var(--accent_primary);
-    color: white;
+    background-color: var(--bg_interactive_primary);
+    color: var(--text_interactive_inversed);
+  `,
+  primary_outline: css`
+    border: 1px solid var(--border_interactive_primary);
+    color: var(--text_interactive_primary);
+  `,
+  primary_clear: css`
+    color: var(--text_interactive_primary);
   `,
   secondary: css`
     color: #333;
@@ -47,6 +62,10 @@ const buttonThemes: StyleOptionProps = {
   `,
   danger: css`
     background-color: #c83b38;
+    color: var(--text_interactive_inversed);
+  `,
+  danger_outline: css`
+    color: var(--text_danger);
   `,
 };
 

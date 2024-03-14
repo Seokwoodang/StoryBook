@@ -39,7 +39,6 @@ const GlobalStyle = createGlobalStyle`
         --bg_danger_subtle:${semantic.color_bg_danger_subtle};
         --bg_danger:${semantic.color_bg_danger};
         --bg_disabled:${semantic.color_bg_disabled};
-        --hello:'red';
         --bg_interactive_primary:${semantic.color_bg_interactive_primary};
         --bg_interactive_primary_hover:${semantic.color_bg_interactive_primary_hover};
         --bg_interactive_primary_actived:${semantic.color_bg_interactive_primary_actived};

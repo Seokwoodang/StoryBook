@@ -13,13 +13,13 @@ const ArrowRight: React.FC<ArrowProps> = ({ theme, disabled }) => {
     if (disabled) {
       setArrowColor("var(--icon_disabled");
     } else {
-      if (theme === "primary_clear" || theme === "primary_outline") {
+      if (theme === "primaryClear" || theme === "primaryOutline") {
         setArrowColor("var(--icon_primary)");
       } else if (
         theme === "primary" ||
         theme === "secondary" ||
         theme === "danger" ||
-        theme === "inversed_outline"
+        theme === "inversedOutline"
       ) {
         setArrowColor("var(--icon_inversed)");
       } else {

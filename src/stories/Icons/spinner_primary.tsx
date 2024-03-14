@@ -10,13 +10,13 @@ const Spinner_primary: React.FC<spinnerProps> = ({ theme }) => {
   const [spinnerColor, setSpinnerColor] = useState<string>("#20315B");
 
   useEffect(function spinnerColorPicker() {
-    if (theme === "primary_clear" || theme === "primary_outline") {
+    if (theme === "primaryClear" || theme === "primaryOutline") {
       setSpinnerColor("var(--icon_primary)");
     } else if (
       theme === "primary" ||
       theme === "secondary" ||
       theme === "danger" ||
-      theme === "inversed_outline"
+      theme === "inversedOutline"
     ) {
       setSpinnerColor("var(--icon_inversed)");
     } else {

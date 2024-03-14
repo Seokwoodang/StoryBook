@@ -23,7 +23,21 @@ type Story = StoryObj<typeof meta>;
 export const Primary: Story = {
   args: {
     theme: "primary",
-    label: "Button",
+    label: "Primary",
+  },
+};
+
+export const PrimaryOutline: Story = {
+  args: {
+    theme: "primaryOutline",
+    label: "PrimaryOutline",
+  },
+};
+
+export const PrimaryClear: Story = {
+  args: {
+    theme: "primaryClear",
+    label: "PrimaryClear",
   },
 };
 
@@ -41,23 +55,16 @@ export const Danger: Story = {
   },
 };
 
-export const Large: Story = {
+export const DangerOutline: Story = {
   args: {
-    size: "large",
-    label: "Button",
+    theme: "dangerOutline",
+    label: "DangerOutline",
   },
 };
 
-export const Small: Story = {
+export const InversedOutline: Story = {
   args: {
-    size: "small",
-    label: "Button",
-  },
-};
-
-export const Medium: Story = {
-  args: {
-    size: "medium",
-    label: "Button",
+    theme: "inversedOutline",
+    label: "InversedOutline",
   },
 };

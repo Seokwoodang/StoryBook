@@ -9,11 +9,11 @@ import ArrowLeft from "./Icons/chevron-left";
 type ButtonSize = "small" | "medium" | "large";
 export type ButtonTheme =
   | "primary"
-  | "primary_outline"
-  | "primary_clear"
+  | "primaryOutline"
+  | "primaryClear"
   | "secondary"
-  | "danger_outline"
-  | "inversed_outline"
+  | "dangerOutline"
+  | "inversedOutline"
   | "danger";
 
 type ButtonShape = "rectangular" | "oval";
@@ -78,7 +78,7 @@ const buttonThemes: StyleOptionProps = {
       color: var(--text_danger_disabled);
     }
   `,
-  primary_outline: css`
+  primaryOutline: css`
     border: 1px solid var(--border_interactive_primary);
     background-color: transparent;
     color: var(--text_interactive_primary);
@@ -92,7 +92,7 @@ const buttonThemes: StyleOptionProps = {
       color: var(--text_danger_disabled);
     }
   `,
-  primary_clear: css`
+  primaryClear: css`
     background-color: transparent;
     color: var(--text_interactive_primary);
     &:hover {
@@ -121,7 +121,7 @@ const buttonThemes: StyleOptionProps = {
     }
   `,
   danger: css`
-    background-color: #c83b38;
+    background-color: var(--bg_interactive_delete);
     color: var(--text_interactive_inversed);
     &:hover {
       background-color: var(--bg_interactive_delete_hover);
@@ -134,7 +134,7 @@ const buttonThemes: StyleOptionProps = {
       color: var(--text_danger_disabled);
     }
   `,
-  danger_outline: css`
+  dangerOutline: css`
     color: var(--text_danger);
     background-color: transparent;
     border: 1px solid var(--border_interactive_delete);
@@ -148,7 +148,7 @@ const buttonThemes: StyleOptionProps = {
       color: var(--text_danger_disabled);
     }
   `,
-  inversed_outline: css`
+  inversedOutline: css`
     background-color: transparent;
     color: var(--text_interactive_inversed);
     &:hover {

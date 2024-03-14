@@ -3,8 +3,6 @@ import semanticColor from "./stories/Foundation/Colors";
 
 const semantic = semanticColor;
 
-console.log(semantic.color_bg_interactive_primary);
-
 const GlobalStyle = createGlobalStyle`
     :root{
         --text_primary:${semantic.color_text_primary};
@@ -19,7 +17,7 @@ const GlobalStyle = createGlobalStyle`
         --text_success_strong:${semantic.color_text_success_strong};
         --text_danger:${semantic.color_text_danger};
         --text_danger_strong:${semantic.color_text_danger_strong};
-        --text_disabled:${semantic.color_text_disabled};
+        --text_danger_disabled:${semantic.color_text_danger_disabled};
         --text_interactive_primary:${semantic.color_text_interactive_primary};
         --text_interactive_primary_hover:${semantic.color_text_interactive_primary_hover};
         --text_interactive_primary_actived:${semantic.color_text_interactive_primary_actived};
@@ -58,7 +56,7 @@ const GlobalStyle = createGlobalStyle`
         --bg_interactive_delete_hover:${semantic.color_bg_interactive_delete_hover};
         --bg_interactive_delete_actived:${semantic.color_bg_interactive_delete_actived};
         --bg_interactive_delete_subtle:${semantic.color_bg_interactive_delete_subtle};
-        --bg_interactive_delete_subtle_hover:${semantic.color_bg_interactive_delete_subtle_hover};
+        --bg_interactive_delete_hover_subtle:${semantic.color_bg_interactive_delete_hover_subtle};
         --bg_interactive_delete_subtle_actived:${semantic.color_bg_interactive_delete_subtle_actived};
         --bg_interactive_disabled:${semantic.color_bg_interactive_disabled};
         --bg_interactive_inversed_hover:${semantic.color_bg_interactive_inversed_hover};

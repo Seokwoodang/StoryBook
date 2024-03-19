@@ -7,18 +7,24 @@ interface CheckBoldProps {
 const CheckBold: React.FC<CheckBoldProps> = ({ disabled }) => {
   const [checkColor, setCheckColor] = useState<string>("var(--icon_inversed)");
 
-  useEffect(function checkColorPicker() {
-    if (!disabled) {
-      setCheckColor("var(--icon_inversed");
-    } else {
-      setCheckColor("var(--icon_disabled");
-    }
-  }, []);
+  useEffect(
+    function checkColorPicker() {
+      if (!disabled) {
+        setCheckColor("var(--icon_inversed)");
+      } else {
+        setCheckColor("var(--icon_disabled)");
+      }
+    },
+    [disabled]
+  );
+
+  console.log(disabled);
+  console.log(checkColor);
 
   return (
     <svg
-      width="24"
-      height="24"
+      width="13"
+      height="13"
       viewBox="0 0 24 24"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"

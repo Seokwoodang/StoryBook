@@ -1,9 +1,13 @@
-import React from "react";
-import logo from "./logo.svg";
+import React, { useState } from "react";
 import "./App.css";
 import { Button } from "./stories/Button";
+import CheckBox from "./stories/CheckBox";
 
 function App() {
+  const [checkOne, setCheckOne] = useState<boolean>(false);
+  const [checkTwo, setCheckTwo] = useState<boolean>(true);
+  const [checkThree, setCheckThree] = useState<boolean>(false);
+
   return (
     <div className="App">
       <div style={{ display: "grid", gap: "5px" }}>
@@ -13,36 +17,29 @@ function App() {
           size="large"
           shape="rectangular"
         />
-        <Button
-          label="hello"
-          theme="primaryOutline"
-          size="small"
-          shape="rectangular"
+        <CheckBox
+          checked={checkOne}
+          setChecked={setCheckOne}
+          theme="primary"
+          disabled={false}
         />
-        <Button
-          label="hello"
-          theme="primaryClear"
-          size="small"
-          shape="rectangular"
+        <CheckBox
+          checked={checkThree}
+          setChecked={setCheckThree}
+          theme="danger"
+          disabled={false}
         />
-        <Button
-          label="hello"
-          theme="secondary"
-          size="small"
-          shape="rectangular"
+        <CheckBox
+          checked={checkTwo}
+          setChecked={setCheckTwo}
+          theme="primary"
+          disabled={true}
         />
-        <Button label="hello" theme="danger" size="small" shape="rectangular" />
-        <Button
-          label="hello"
-          theme="dangerOutline"
-          size="small"
-          shape="rectangular"
-        />
-        <Button
-          label="hello"
-          theme="inversedOutline"
-          size="small"
-          shape="rectangular"
+        <CheckBox
+          checked={checkTwo}
+          setChecked={setCheckTwo}
+          theme="danger"
+          disabled={true}
         />
       </div>
     </div>

@@ -81,6 +81,12 @@ const globalColor = {
   purple700: "#492379",
   purple800: "#311850",
   purple900: "#180C28",
+  navy5: "rgba(32, 49, 91, 0.05)",
+  navy10: "rgba(32, 49, 91, 0.10)",
+  blue5: "rgba(34, 118, 220, 0.05)",
+  blue10: "rgba(34, 118, 220, 0.10)",
+  white5: "rgba(255, 255, 255, 0.05)",
+  white20: "rgba(255, 255, 255, 0.20)",
 };
 
 const themeColorWeb = {
@@ -149,6 +155,10 @@ const themeColorWeb = {
   color_selected_6: globalColor.blue600,
   color_selected_7: globalColor.blue700,
   color_selected_8: globalColor.blue800,
+  color_interaction_hover: globalColor.navy5,
+  color_interaction_actived: globalColor.navy10,
+  color_interaction_inversed_hover: globalColor.white5,
+  color_interaction_inversed_actived: globalColor.white20,
 };
 
 const themeColorApp = {
@@ -262,9 +272,9 @@ const semanticColor = {
   color_bg_interactive_secondary: currentTheme.color_accent_5,
   color_bg_interactive_secondary_hover: currentTheme.color_accent_6,
   color_bg_interactive_secondary_actived: currentTheme.color_accent_7,
-  color_bg_interactive_tertiary: currentTheme.color_neutral_1,
-  color_bg_interactive_tertiary_hover: currentTheme.color_neutral_2,
-  color_bg_interactive_tertiary_actived: currentTheme.color_neutral_3,
+  color_bg_interactive_tertiary: globalColor.white,
+  color_bg_interactive_tertiary_hover: currentTheme.color_interaction_hover,
+  color_bg_interactive_tertiary_actived: currentTheme.color_interaction_actived,
   color_bg_interactive_selected: currentTheme.color_selected_1,
   color_bg_interactive_selected_hover: currentTheme.color_selected_2,
   color_bg_interactive_selected_actived: currentTheme.color_selected_3,
